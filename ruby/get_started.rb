@@ -14,7 +14,7 @@ end
 
 p '--------------------------------------------'
 puts 'Operadores em ruby são apenas métodos'
-puts "Exemplo: 10.*(2) + 10.+(10) = #{ 10.*(2) + 10.+(10) }" 
+puts "Exemplo: 10.*(2) + 10.+(10) = #{ 10.*(2) + 10.+(10) }"
 
 p '--------------------------------------------'
 puts 'Quase tudo pode ser alterado ou manipulado em tempo de execução'
@@ -25,7 +25,7 @@ class String
     # self se refere ao objeto atual é igual o this do java ou $this do php
     self * i
   end
-end 
+end
 puts 'foo '.repeat(3)
 puts 'Defini um método dentro da classe String do ruby e sendo estando disponível imediatamente em uma string.'
 
@@ -42,7 +42,7 @@ puts "Formação original: [1, 2, 3, 4, 5]"
 a = [1, 2, 3, 4, 5]
 p a.reverse
 p a
-p a.reverse! 
+p a.reverse!
 p a
 
 p '-------------------------------------------'
@@ -62,7 +62,7 @@ puts 'blocos estão constituídos entre do e end ou {}'
 puts 'somente se utiliza {} quando o bloco possui apenas uma linha de comando'
 puts 'variáveis que inicia com minúscula são variáveis locais'
 puts 'variáveis que inicia com maiúsculo são variáveis globais'
-puts 'variáveis de instância inicia com @. Significa que pode ser compartilhada em toda instância de sua classe.' 
+puts 'variáveis de instância inicia com @. Significa que pode ser compartilhada em toda instância de sua classe.'
 puts 'métodos que terminam com ! ou ? não é caracteres especiais, mas sim um convenção do Ruby. Na qual ? é usado para métodos que retorna um booleano, e ! para métodos destrutíveis.'
 
 p '-------------------------------------------'
