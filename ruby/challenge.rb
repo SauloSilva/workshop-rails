@@ -7,13 +7,11 @@
   Sortear um nome aleatório em uma lista de nomes,
   mas antes os nomes devem ser embaralhados 3 vezes
   monstrando seu estado atual em cada interação,
-  após embaralhar 3 vezes pegar o nome que ocupar a última posição das posições impares.
+  após embaralhar 3 vezes pegar o nome que ocupar a última posição dos impares.
 txt
 
-names = ['a','b', 'c', 'd', 'e', 'f']
-
-p 'Formação inicial:', names
-p 'começou embaralhar...'
+names = %w(a b c d e f g h i j k l)
+p "Formação inicial: #{ names }"
 
 3.times do
   names.shuffle!
