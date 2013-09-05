@@ -12,3 +12,9 @@ heredoc = <<-text
 text
 
 p "#{ heredoc.class } => #{ heredoc }"
+
+# consigo utilizar os operadores para manipular strings
+foo = 'foo'
+bar = 'bar'
+
+foo << bar

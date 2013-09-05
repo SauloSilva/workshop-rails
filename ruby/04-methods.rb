@@ -40,6 +40,7 @@ user('foo', 22, 'Birigui')
 
 class People
   def user(name)
+    cpf
     p name
   end
 
@@ -53,6 +54,13 @@ class People
     def birthdate(date)
       p date
     end
+  end
+
+  # protegendo método com a palavra private
+  # People.new.cpf => private method cpf called for People
+  private
+  def cpf
+    p '123123'
   end
 end
 
@@ -74,3 +82,6 @@ module Car
 end
 
 Car.model('Honda')
+
+
+#

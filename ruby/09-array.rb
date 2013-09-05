@@ -53,11 +53,10 @@ p '========================='
 # Math.sqrt == raiz quadrada
 
 def operation(x)
-  Math.sqrt(x) + 5 * x ** 3
+  Math.sqrt(x.abs) + 5 * x ** 3
 end
 
-Array.new(11, rand(99)).reverse.each do |x|
+(1..11).sort_by{rand}.reverse.each do |x|
   result = operation(x).to_i
-  rand_number = rand(99)
-  puts(result > rand_number ? "Acima de #{ rand_number }: #{ result }" : "Abaixo de #{ rand_number }: #{ result }")
+  p result < 400 ? "#{ result } não ultrapassou o limite de 400" : result
 end
