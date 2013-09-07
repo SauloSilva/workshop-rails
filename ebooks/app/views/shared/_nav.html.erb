@@ -7,6 +7,9 @@
     <li>
       <%= link_to 'home', root_path%>
     </li>
+    <li>
+      <%= link_to 'books', books_path%>
+    </li>
     <%- unless user_signed_in? %>
       <li>
         <%= link_to 'subscribe', new_user_registration_path%>
@@ -19,6 +22,9 @@
         Welcome!
         <%= link_to current_user.name, edit_user_registration_path %>
         <%= link_to 'exit', destroy_user_session_path, method: :delete%>
+      </li>
+      <li>
+        <%= link_to 'new book', new_book_path%>
       </li>
     <%- end%>
   </ul>

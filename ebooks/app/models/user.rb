@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
   validates_presence_of :name, :birthdate
   validates_uniqueness_of :name
 
+  # association
+  has_many :books, dependent: :destroy
 end
