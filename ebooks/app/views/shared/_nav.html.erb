@@ -2,25 +2,24 @@
   <b> <%= notice%> </b>
 </div>
 
-<div class='hello'>
-  <%- if user_signed_in? %>
-    <p>
-      Welcome! <%= current_user.name %>
-      <%= link_to 'exit', destroy_user_session_path, method: :delete%>
-    </p>
-  <%- end %>
-</div>
-
-<ul>
-  <li>
-    <%= link_to 'home', root_path%>
-  </li>
-  <%- unless user_signed_in? %>
+<nav>
+  <ul>
     <li>
-      <%= link_to 'subscribe', new_user_registration_path%>
+      <%= link_to 'home', root_path%>
     </li>
-    <li>
-      <%= link_to 'subscribe', new_user_session_path%>
-    </li>
-  <%- end%>
-</ul>
+    <%- unless user_signed_in? %>
+      <li>
+        <%= link_to 'subscribe', new_user_registration_path%>
+      </li>
+      <li>
+        <%= link_to 'login', new_user_session_path%>
+      </li>
+    <%- else%>
+      <li>
+        Welcome!
+        <%= link_to current_user.name, edit_user_registration_path %>
+        <%= link_to 'exit', destroy_user_session_path, method: :delete%>
+      </li>
+    <%- end%>
+  </ul>
+</nav>
