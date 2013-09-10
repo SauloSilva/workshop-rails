@@ -4,6 +4,8 @@ class CreateBooks < ActiveRecord::Migration
       t.references :user, index: true
       t.string :title
       t.string :author
+      t.string :url
+      t.string :publishing_house
       t.integer :edition
       t.date :published_at
       t.boolean :published

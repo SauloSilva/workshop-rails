@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(version: 20130907200057) do
     t.integer  "user_id"
     t.string   "title"
     t.string   "author"
+    t.string   "url"
+    t.string   "publishing_house"
     t.integer  "edition"
     t.date     "published_at"
     t.boolean  "published"
