@@ -1,2 +1,12 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<h1>Books list</h1>
+
+<div id='#books'>
+  <%- @books.each do |book| %>
+    <div class='book'>
+      <%= image_tag book.url %>
+      <b> <%= book.title %> </b>
+      <b> <%= book.author %> </b>
+      <b> Edition: <%= book.author %> </b>
+    </div>
+  <% end %>
+</div>
