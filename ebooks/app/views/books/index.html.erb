@@ -12,6 +12,14 @@
         <b> Edition: <%= book.author %> </b>
       </div>
     <% end %>
+
+    <b> Categories: </b>
+    <%- book.categories.each do |category| %>
+      <div class='categories'>
+        <%= category.title %>
+      </div>
+    <% end %>
+
     <%- if current_user && book.user_id == current_user.id  %>
       <div class='edition'>
         <%= link_to 'edit', edit_book_path(book) %>

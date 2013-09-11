@@ -4,12 +4,10 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use mysql as the database for Active Record
-gem 'mysql2'
+gem 'mysql2', '0.3.13'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
-gem 'compass'
-gem 'zurb-foundation'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -21,7 +19,9 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails', '3.0.4'
+
+gem 'awesome_nested_fields', '0.6.1'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -31,7 +31,9 @@ gem 'jbuilder', '~> 1.2'
 
 # create login and registratio the user
 gem 'devise', '3.1.0'
-gem 'issuu'
+
+gem 'issuu', '0.3.0'
+
 group :development do
   gem 'quiet_assets'
 end

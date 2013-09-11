@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require swfobject
+//= require jquery.nested-fields.js
 //= require_tree .

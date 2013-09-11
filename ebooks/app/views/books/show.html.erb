@@ -1,5 +1,12 @@
 <h1>Books <%= @book.title %></h1>
 
+<b> Categories: </b>
+<%- @book.categories.each do |category| %>
+  <div class='categories'>
+    <%= category.title %>
+  </div>
+<% end %>
+
 <div id='book'>
   <div class= 'file'>
     <div id="issuu-<%= @book.id %>-viewer">
