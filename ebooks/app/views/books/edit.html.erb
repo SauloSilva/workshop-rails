@@ -3,3 +3,4 @@
 <%= form_for @book, url: book_path do |f|%>
   <%= render partial: 'books/form', locals: {f: f} %>
 <% end %>
+<%= link_to 'destroy', book_path(@book), method: :delete, confirm: 'You want to delete?' %>

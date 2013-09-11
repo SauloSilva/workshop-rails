@@ -1,11 +1,13 @@
 class BooksController < ApplicationController
   before_filter :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_filter :authorized_book!, only: [:edit, :destroy]
 
   def index
     @books = Book.all
   end
 
   def show
+    @book = Book.find(params[:id])
   end
 
   def new
@@ -36,10 +38,23 @@ class BooksController < ApplicationController
   end
 
   def destroy
+    @book = Book.find(params[:id])
+    if @book.destroy
+      redirect_to books_path
+    else
+      render action: :edit
+    end
   end
 
   private
   def book_params
     params.require(:book).permit!
+  end
+
+  def authorized_book!
+    @book = Book.find(params[:id])
+    if @book.user_id != current_user.id
+      redirect_to books_path
+    end
   end
 end

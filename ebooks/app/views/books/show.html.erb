@@ -1,2 +1,11 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<h1>Books <%= @book.title %></h1>
+
+<div id='book'>
+  <div class= 'file'>
+    <div id="issuu-<%= @book.id %>-viewer">
+      <%= book_viewer @book, 600, 400 %>
+    </div>
+    <p>Edition: <%= @book.edition%></p>
+    <p>Published at: <%= @book.published_at%></p>
+  </div>
+</div>

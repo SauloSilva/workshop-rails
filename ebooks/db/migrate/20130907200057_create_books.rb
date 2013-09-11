@@ -4,7 +4,7 @@ class CreateBooks < ActiveRecord::Migration
       t.references :user, index: true
       t.string :title
       t.string :author
-      t.string :url
+      t.string :issuu_id
       t.string :publishing_house
       t.integer :edition
       t.date :published_at
