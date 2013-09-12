@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 ruby '1.9.3'
 
 gem 'rails', '4.0.0'
-#gem 'mysql2', '0.3.13'
 gem 'pg'
 
 gem 'sass-rails', '4.0.0'
@@ -19,5 +18,6 @@ gem 'will_paginate', '3.0.4'
 gem 'issuu', '0.3.0'
 
 group :development do
+  gem 'mysql2', '0.3.13'
   gem 'quiet_assets'
 end
