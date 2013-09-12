@@ -36,11 +36,8 @@ class Book < ActiveRecord::Base
   private
   def set_issuu_id
     Issuu::Document.list.each do |file|
-      if file.title == title
-        self.issuu_id = file.documentId
-      else
-        errors.add(:issuu_id, 'There is no such issuu')
-      end
+      self.issuu_id = file.documentId if file.title == title
     end
+    errors.add(:issuu_id, 'There is no such issuu') if issuu_id.blank?
   end
 end
