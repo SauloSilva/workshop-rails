@@ -34,6 +34,6 @@ production:
   adapter: postgresql
   encoding: utf8
   reconnect: false
-  database: ebooks_production
+  database: workshop-rails
   pool: 5
   username: ebooks
