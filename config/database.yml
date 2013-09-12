@@ -29,10 +29,12 @@ test:
   password:
   socket: /tmp/mysql.sock
 
+
 production:
   adapter: postgresql
   encoding: utf8
   database: d9n9vsr52tscrb
-  pool: 5
   username: rarfdyfzhcxwcu
+  port: 5432
   password: D_Va634jE9GaUttS5K0-ar1ADF
+  host: ec2-23-23-211-161.compute-1.amazonaws.com
