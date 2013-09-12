@@ -3,7 +3,7 @@ class BooksController < ApplicationController
   before_filter :authorized_book!, only: [:edit, :destroy]
 
   def index
-    @books = Book.paginate(page: params[:page], per_page: 1)
+    @books = Book.paginate(page: params[:page], per_page: 6)
   end
 
   def show
