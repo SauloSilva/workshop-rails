@@ -2,8 +2,6 @@ source 'https://rubygems.org'
 ruby '1.9.3'
 
 gem 'rails', '4.0.0'
-gem 'pg'
-
 gem 'sass-rails', '4.0.0'
 gem 'uglifier', '1.3.0'
 gem 'coffee-rails', '4.0.0'
@@ -20,4 +18,8 @@ gem 'issuu', '0.3.0'
 group :development do
   gem 'mysql2', '0.3.13'
   gem 'quiet_assets'
+end
+
+group :production do
+  gem 'pg', '0.16.0'
 end
