@@ -10,7 +10,7 @@
     height: 320px
     margin-left: 20px
     width: 280px
-
+    position: relative
     a
       span
         clear: both
@@ -20,14 +20,46 @@
         text-align: center
         &.title
           color: #594c22
-          font-size: 18px
+          font-size: 23px
           font-weight: bold
+          letter-spacing: 6px
           margin-top: 10px
         &.author
           color: #8b793f
+      span.border
+        border-radius: 50%
+        border: 2px solid #887434
+        height: 210px
+        left: 33px
+        position: absolute
+        top: 62px
+        width: 210px
+      img
+        border-radius: 50%
+        display: block
+        height: 200px
+        margin: 20px auto
+        overflow: hidden
+        width: 200px
+
+    #category
+      margin: 0 auto
+      width: 206px
+      span.categories
+        background: #fff
+        color: #594c22
+        display: block
+        float: left
+        font-size: 10px
+        font-weight: bold
+        margin: 0 5px
+        padding: 5px
 
     &:hover
       background: #bc9c37
+      transition-duration: 2s
       span
         &.author
           color: #fff
+      span.border
+        border-color: #fff

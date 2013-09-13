@@ -1,23 +1,22 @@
 <div id='books'>
   <%- @books.each do |book| %>
+
     <div class='book'>
       <%= link_to book do%>
-
         <span class='title'> <%= book.title %> </span>
         <span class='author'> <%= book.author %> </span>
-
-
-        <%= image_tag book.url %>
-        <b> Edition: <%= book.author %> </b>
+        <span class='border'></span>
+        <%= image_tag book.url%>
       <% end %>
 
-      <%- if book.categories.present? %>
-        <b> Categories: </b>
-        <%- book.categories.each do |category| %>
-          <div class='categories'>
-            <%= category.title %>
-          </div>
-        <% end %>
+      <div id='category'>
+        <%- if book.categories.present? %>
+          <%- book.categories.limit(4).each do |category| %>
+            <span class='categories'>
+              <%= category.title %>
+            </span>
+          <% end %>
+      </div>
 
         <%- if current_user && book.user_id == current_user.id  %>
           <div class='edition'>

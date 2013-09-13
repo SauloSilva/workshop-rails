@@ -20,7 +20,7 @@ class Book < ActiveRecord::Base
 
   def url
     return if issuu_id.blank?
-    "http://image.issuu.com/#{ issuu_id }/jpg/page_1_thumb_medium.jpg"
+    "http://image.issuu.com/#{ issuu_id }/jpg/page_1_thumb_large.jpg"
   end
 
   def category_titles=(titles)
