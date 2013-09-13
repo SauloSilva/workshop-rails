@@ -1,0 +1,33 @@
+@import compass
+
+#books
+  +inline-block
+  margin-top: 25px
+  .book
+    display: block
+    background: #ebc95e
+    float: left
+    height: 320px
+    margin-left: 20px
+    width: 280px
+
+    a
+      span
+        clear: both
+        display: block
+        margin-top: 5px
+        width: 100%
+        text-align: center
+        &.title
+          color: #594c22
+          font-size: 18px
+          font-weight: bold
+          margin-top: 10px
+        &.author
+          color: #8b793f
+
+    &:hover
+      background: #bc9c37
+      span
+        &.author
+          color: #fff

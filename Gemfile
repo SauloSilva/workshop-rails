@@ -6,6 +6,7 @@ gem 'sass-rails', '4.0.0'
 gem 'uglifier', '1.3.0'
 gem 'coffee-rails', '4.0.0'
 gem 'jquery-rails', '3.0.4'
+gem 'compass-rails', '2.0.alpha.0'
 
 gem 'awesome_nested_fields', '0.6.1'
 gem 'turbolinks'
