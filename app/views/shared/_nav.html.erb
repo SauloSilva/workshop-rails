@@ -4,27 +4,29 @@
 
 <nav>
   <ul>
-    <li>
+    <li class=<%= current_page(root_path)%>>
       <%= link_to 'home', root_path%>
     </li>
-    <li>
-      <%= link_to 'books', books_path%>
+
+    <li class=<%= current_page(books_path)%>>
+      <%= link_to 'books', books_path %>
     </li>
-    <li>
-      <%= link_to 'categories', categories_path%>
+
+    <li class=<%= current_page(categories_path)%>>
+      <%= link_to 'categories', categories_path %>
     </li>
 
     <%- unless user_signed_in? %>
-      <li>
-        <%= link_to 'subscribe', new_user_registration_path%>
+      <li class=<%= current_page(new_user_registration_path)%>>
+        <%= link_to 'subscribe', new_user_registration_path %>
       </li>
-      <li>
-        <%= link_to 'login', new_user_session_path%>
+      <li class=<%= current_page(new_user_session_path)%>>
+        <%= link_to 'login', new_user_session_path %>
       </li>
 
     <%- else%>
-      <li>
-        <%= link_to 'new book', new_book_path%>
+      <li class=<%= current_page(new_book_path)%>>
+        <%= link_to 'new book', new_book_path %>
       </li>
 
       <li>
