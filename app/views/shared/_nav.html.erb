@@ -2,38 +2,41 @@
   <b> <%= notice%> </b>
 </div>
 
-<nav>
-  <ul>
-    <li class=<%= current_page(root_path)%>>
-      <%= link_to 'home', root_path%>
+<ul class='nav'>
+  <li class=<%= current_page(root_path)%>>
+    <%= link_to 'home', root_path%>
+  </li>
+
+  <li class=<%= current_page(books_path)%>>
+    <%= link_to 'books', books_path %>
+  </li>
+
+  <li class=<%= current_page(categories_path)%>>
+    <%= link_to 'categories', categories_path %>
+  </li>
+
+  <%- unless user_signed_in? %>
+    <li class=<%= current_page(new_user_registration_path)%>>
+      <%= link_to 'subscribe', new_user_registration_path %>
+    </li>
+    <li class=<%= current_page(new_user_session_path)%>>
+      <%= link_to 'login', new_user_session_path %>
     </li>
 
-    <li class=<%= current_page(books_path)%>>
-      <%= link_to 'books', books_path %>
+  <%- else%>
+    <li class=<%= current_page(new_book_path)%>>
+      <%= link_to 'new book', new_book_path %>
     </li>
+  <%- end%>
+</ul>
 
-    <li class=<%= current_page(categories_path)%>>
-      <%= link_to 'categories', categories_path %>
+
+<%- if user_signed_in? %>
+  <ul class= 'user'>
+    <li>
+      <%= link_to image_tag(current_user.avatar), edit_user_registration_path %>
+      <%= link_to 'exit', destroy_user_session_path, method: :delete, class: 'exit'%>
     </li>
-
-    <%- unless user_signed_in? %>
-      <li class=<%= current_page(new_user_registration_path)%>>
-        <%= link_to 'subscribe', new_user_registration_path %>
-      </li>
-      <li class=<%= current_page(new_user_session_path)%>>
-        <%= link_to 'login', new_user_session_path %>
-      </li>
-
-    <%- else%>
-      <li class=<%= current_page(new_book_path)%>>
-        <%= link_to 'new book', new_book_path %>
-      </li>
-
-      <li>
-        Welcome!
-        <%= link_to image_tag(current_user.avatar), edit_user_registration_path %>
-        <%= link_to 'exit', destroy_user_session_path, method: :delete%>
-      </li>
-    <%- end%>
   </ul>
-</nav>
+<% end %>
+

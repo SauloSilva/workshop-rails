@@ -1,3 +1,5 @@
+@import compass
+
 .bottom
   background: #585858
   height: 36px
@@ -19,6 +21,7 @@
       color: #ccc
 
 form
+  +clearfix
   background: #fff
   margin: 0 auto
   padding: 20px
@@ -35,26 +38,54 @@ form
     input
       border: 1px solid rgb(187, 166, 166)
 
+
+
   div
     margin: 10px auto
+
+    h3
+      float: left
+      margin: 20px 0 20px 0
+
+    a.add, a.remove
+      color: #fff
+      cursor: pointer
+      float: right
+      font-weight: bold
+      padding: 5px 10px
+    a.add
+      background: #72ADB2
+      margin-top: 25px
+      &:hover
+        background: #4E8E94
+    a.remove
+      background: #9E6464
+      display: block
+      width: 122px
+      text-align: center
+      &:hover
+        background: #7C3E3E
+
     input
       border: 1px solid rgba(41, 111, 138, 0.27)
       font-size: 15px
+      font-weight: bold
+      letter-spacing: 4px
       height: 25px
       padding: 5px
-      width: 500px
+      width: 502px
     label
       color: #0e4e67
       display: block
       font-size: 18px
       font-weight: bold
+      margin-bottom: 5px
     input[type='submit']
       background: #E7E7E7
       border: 0
       color: #0e4e67
       cursor: pointer
       font-weight: bold
-      height: 20px
       height: 40px
       margin-top: 20px
       width: 512px
