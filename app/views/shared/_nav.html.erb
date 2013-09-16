@@ -1,7 +1,3 @@
-<div class='notice'>
-  <b> <%= notice%> </b>
-</div>
-
 <ul class='nav'>
   <li class=<%= current_page(root_path)%>>
     <%= link_to 'home', root_path%>
@@ -40,3 +36,8 @@
   </ul>
 <% end %>
 
+<%- unless notice.blank? %>
+  <div class='notice'>
+    <b> <%= notice%> </b>
+  </div>
+<% end %>

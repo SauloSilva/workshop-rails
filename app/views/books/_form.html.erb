@@ -1,3 +1,5 @@
+<%= error_message(@book) %>
+
 <div>
   <%= f.label :published%>
   <%= f.check_box :published%>
@@ -37,15 +39,15 @@
       <fieldset class="item">
         <%= f.label :title %>
         <%= f.text_field :title, name: 'book[category_titles][]' %>
-        <a href="#" class="remove">remove</a>
         <%= f.hidden_field :id %>
         <%= f.hidden_field :_destroy %>
+        <a href="#" class="remove">remove</a>
       </fieldset>
     <% end %>
   </div>
 </div>
 
-<%= f.submit %>
+<div><%= f.submit %></div>
 
 <% content_for :javascript do %>
   <script type='text/javascript'>

@@ -1,18 +1,32 @@
-<h1>Books <%= @book.title %></h1>
+<h2>Books <%= @book.title %></h2>
 
-<b> Categories: </b>
-<%- @book.categories.each do |category| %>
-  <div class='categories'>
-    <%= category.title %>
-  </div>
-<% end %>
-
-<div id='book'>
-  <div class= 'file'>
-    <div id="issuu-<%= @book.id %>-viewer">
-      <%= book_viewer @book, 600, 400 %>
+<div class='content_book_show'>
+  <div id='book'>
+    <div class= 'file'>
+      <div id="issuu-<%= @book.id %>-viewer">
+        <%= book_viewer @book, 600, 400 %>
+      </div>
     </div>
-    <p>Edition: <%= @book.edition%></p>
-    <p>Published at: <%= @book.published_at%></p>
+  </div>
+
+  <div class='info'>
+    <%- unless @book.categories.blank?%>
+      <div class='categories'>
+        <b>Categories: </b>
+        <%- @book.categories.each do |category| %>
+          <span>
+            <%= category.title %>
+          </span>
+        <% end %>
+      </div>
+    <% end %>
+    <span class='edition'>
+      <b>Edition:</b>
+      <%= @book.edition%>
+    </span>
+    <span class='published_at'>
+      <b>Published at:</b>
+      <%= @book.published_at%>
+    </span>
   </div>
 </div>
