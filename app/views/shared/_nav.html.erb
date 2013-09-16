@@ -26,7 +26,6 @@
   <%- end%>
 </ul>
 
-
 <%- if user_signed_in? %>
   <ul class= 'user'>
     <li>
@@ -39,5 +38,11 @@
 <%- unless notice.blank? %>
   <div class='notice'>
     <b> <%= notice%> </b>
+  </div>
+<% end %>
+
+<%- unless alert.blank? %>
+  <div class='alert'>
+    <b> <%= alert%> </b>
   </div>
 <% end %>

@@ -33,7 +33,6 @@ class BooksController < ApplicationController
     if @book.update_attributes(book_params)
       redirect_to book_path(@book)
     else
-      p @book.errors
       render action: :edit
     end
   end
