@@ -1,0 +1,44 @@
+<ul class='nav'>
+  <li>
+    <%= link_to 'home', root_path %>
+  </li>
+
+  <li>
+    <%= link_to 'books', books_path%>
+  </li>
+
+  <%- unless user_signed_in?%>
+    <li>
+      <%= link_to 'subscribe', new_user_registration_path %>
+    </li>
+
+    <li>
+      <%= link_to 'login', new_user_session_path %>
+    </li>
+  <%- else%>
+    <li>
+      <%= link_to 'new book', new_book_path%>
+    </li>
+  <% end %>
+</ul>
+
+<%- if user_signed_in?%>
+  <ul class='user'>
+    <li>
+      <%= link_to image_tag(current_user.avatar), edit_user_registration_path %>
+      <%= link_to 'exit', destroy_user_session_path, method: :delete, class: 'exit'%>
+    </li>
+  </ul>
+<% end %>
+
+<%- unless notice.blank? %>
+  <div class='notice'>
+    <b><%= notice%></b>
+  </div>
+<% end %>
+
+<%- unless alert.blank? %>
+  <div class='alert'>
+    <b><%= alert%></b>
+  </div>
+<% end %>

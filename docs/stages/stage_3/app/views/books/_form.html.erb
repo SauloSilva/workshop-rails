@@ -1,0 +1,57 @@
+<%= error_messages(@book) %>
+
+<div>
+  <%= f.label :published%>
+  <%= f.check_box :published%>
+</div>
+
+<div>
+  <%= f.label :title%>
+  <%= f.text_field :title%>
+</div>
+
+<div>
+  <%= f.label :author%>
+  <%= f.text_field :author%>
+</div>
+
+<div>
+  <%= f.label :edition%>
+  <%= f.number_field :edition%>
+</div>
+
+<div>
+  <%= f.label :published_at%>
+  <%= f.date_field :published_at%>
+</div>
+
+<div>
+  <%= f.label :publishing_house%>
+  <%= f.text_field :publishing_house%>
+</div>
+
+<div id='category'>
+  <h3>Categories</h3>
+  <a href='#' class='add'> add categories </a>
+
+  <div class='items'>
+    <%= f.nested_fields_for :categories do |category| %>
+      <fieldset class='item'>
+        <%= category.label :title%>
+        <%= category.text_field :title, name: 'book[category_titles][]'%>
+        <%= category.hidden_field :id%>
+        <%= category.hidden_field :_destroy%>
+
+        <a href="#", class='remove'>remove</a>
+      </fieldset>
+    <% end %>
+  </div>
+</div>
+
+<div><%= f.submit %></div>
+
+<%= content_for :javascript do %>
+  <script type="text/javascript">
+    $('#category').nestedFields()
+  </script>
+<% end %>

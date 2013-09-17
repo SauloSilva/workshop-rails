@@ -1,0 +1,22 @@
+<h2>Books <%= @book.title %></h2>
+
+<div class='content_book_show'>
+  <div id='book'>
+    <div class= 'file'>
+      <div id="issuu-<%= @book.id %>-viewer">
+        <%= book_viewer @book, 600, 400 %>
+      </div>
+    </div>
+  </div>
+
+  <div class='info'>
+    <span class='edition'>
+      <b>Edition:</b>
+      <%= @book.edition%>
+    </span>
+    <span class='published_at'>
+      <b>Published at:</b>
+      <%= @book.published_at%>
+    </span>
+  </div>
+</div>

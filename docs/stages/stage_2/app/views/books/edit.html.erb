@@ -1,0 +1,5 @@
+<h2>Edit <%= @book.title%></h2>
+
+<%= render partial: 'books/form', locals: {book: @book}%>
+
+<%= link_to 'destroy', book_path(@book), method: :delete, confirm: 'You want to delete?' %>
