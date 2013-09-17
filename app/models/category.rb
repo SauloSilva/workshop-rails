@@ -5,5 +5,6 @@ class Category < ActiveRecord::Base
   # validations
   validates_presence_of :title
 
-  accepts_nested_attributes_for :books, allow_destroy: true
+  accepts_nested_attributes_for :books, allow_destroy: true,
+    reject_if: proc { |attributes| attributes['id'].blank? }
 end
