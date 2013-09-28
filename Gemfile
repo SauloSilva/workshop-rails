@@ -12,6 +12,8 @@ gem 'awesome_nested_fields', '0.6.1'
 gem 'turbolinks'
 gem 'jbuilder', '1.2'
 
+gem 'newrelic_rpm'
+
 gem 'devise', '3.1.0'
 gem 'will_paginate', '3.0.4'
 gem 'issuu', '0.3.0'
