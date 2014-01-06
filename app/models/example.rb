@@ -5,5 +5,6 @@ class Example < ActiveRecord::Base
 
   def bar(foo)
     p "#{ foo } => bar"
+
   end
 end
